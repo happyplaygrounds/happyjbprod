@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Home
-permalink: /home/
+redirect_to: https://www.happyplaygrounds.com/
 ---
 
 Home Test
