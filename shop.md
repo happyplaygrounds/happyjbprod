@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Shop
-permalink: /about/
+redirect_to: https://ecommerce.happyplaygrounds.com
 ---
 
 This is a basic Jekyll theme based on Bootstrap 5. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

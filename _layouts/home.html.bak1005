@@ -23,51 +23,14 @@ layout: default
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
   	{% assign videos = site.videos | reverse %}
-        {% for video in videos limit: 4 %}
-  {% comment %}{% raw %}  		<a href='{{ site.baseurl }}{{ video.url }}'>
+  	{% for video in videos limit: 3 %}
+    		<a href='{{ site.baseurl }}{{ video.url }}'>
 		<img class="img-fluid" src='https://d1wfqjcm45bc90.cloudfront.net/{{ video.image }}' />
       		<h3>{{ video.title }} </h3>
 		<h3><time>{{ video.date | date: '%d %B %Y'}}</time></h3>
     		</a>
-  {% endraw %}{% endcomment %}
-
-<article itemscope itemtype='http://schema.org/VideoObject'>
-  <header>
-	  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
-	  <h2 itemprop='name'>{{ page.title }}</h2>
-	  <time itemprop='uploadDate' content='{{ page.date }}'>
-	    {{ page.date | date: '%d %B %Y'}}
-	  </time>
-   </header>
-	<section class='video-wrapper'>
-  <video
-     id="{{video.happy_id}}"
-    class="video-js"
-    controls
-    preload="auto"
-    width="940"
-    height="564"
-    poster="https://d1wfqjcm45bc90.cloudfront.net/{{ video.image }}"
-    data-setup='{}'
-    >
-    <source src="{{video.happysource}}" type="application/x-mpegURL">
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-
-	</section>
-	<section class='description' itemprop='description'>
-  	{{ video.content }}
-  </section>
-</article>
-
-
-{% endfor %}
+  	{% endfor %}
+    </ul>
   </div>
 
 
@@ -90,8 +53,5 @@ layout: default
     {%- endif %}
 
   {%- endif -%}
-
-
-  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
 
 </div>

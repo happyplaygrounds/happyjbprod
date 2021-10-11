@@ -1,4 +1,5 @@
-title: Your awesome title
+name: Happy Playgrounds, LLC
+title: Happy Playgrounds Video Gallery
 author:
   name: 'Github User'
   email: 'github@example.com'
@@ -35,11 +36,11 @@ bootstrap:
 
   # generate social links in footer
   social_links:
-    twitter: 'https://twitter.com/jonaharagon'
-    github:  'https://github.com/jonaharagon'
-    #facebook: 'https://example.com/@jekyllrb'
-    #instagram: 'https://example.com/@jekyllrb'
-    #linkedin: 'https://example.com/@jekyllrb'
+    twitter: 'https://twitter.com/playworldplay'
+      #github:  'https://github.com/jonaharagon'
+    facebook: 'https://www.facebook.com/happyplaygrounds/'
+    linkedin: 'http://linkedin.com/company/happyplaygrounds'
+    instagram: 'https://www.instagram.com/happyplaygrounds/?hl=en'
     #google: 'https://example.com/@jekyllrb'
     #youtube: 'https://example.com/@jekyllrb'
     #twitch: 'https://example.com/@jekyllrb'
@@ -55,3 +56,24 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-redirect-from
+
+
+ 
+# Collections
+collections:
+  videos:
+    output: true
+    permalink: /:path/
+defaults:
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+  -
+    scope:
+      path: ''
+      type: videos
+    values:
+      layout: video

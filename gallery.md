@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Gallery
-permalink: /about/
+redirect_to: https://www.happyplaygrounds.com/gallery
 ---
 
 This is a basic Jekyll theme based on Bootstrap 5. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

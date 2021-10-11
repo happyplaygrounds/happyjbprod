@@ -23,13 +23,13 @@ layout: default
       <h2 class="post-list-heading">{{ page.list_title }}</h2>
     {%- endif -%}
   	{% assign videos = site.videos | reverse %}
-        {% for video in videos limit: 4 %}
-  {% comment %}{% raw %}  		<a href='{{ site.baseurl }}{{ video.url }}'>
+                {% comment %}{% raw %}	{% for video in videos limit: 3 %} {% endraw %}{% endcomment %}
+  <!---  		<a href='{{ site.baseurl }}{{ video.url }}'>
 		<img class="img-fluid" src='https://d1wfqjcm45bc90.cloudfront.net/{{ video.image }}' />
       		<h3>{{ video.title }} </h3>
 		<h3><time>{{ video.date | date: '%d %B %Y'}}</time></h3>
     		</a>
-  {% endraw %}{% endcomment %}
+  -->
 
 <article itemscope itemtype='http://schema.org/VideoObject'>
   <header>
@@ -41,16 +41,17 @@ layout: default
    </header>
 	<section class='video-wrapper'>
   <video
-     id="{{video.happy_id}}"
+    id="1"
     class="video-js"
     controls
     preload="auto"
+    autoplay="true"
     width="940"
     height="564"
-    poster="https://d1wfqjcm45bc90.cloudfront.net/{{ video.image }}"
+    poster="https://d1wfqjcm45bc90.cloudfront.net/tulsa-dhs-vlog3.jpg"
     data-setup='{}'
     >
-    <source src="{{video.happysource}}" type="application/x-mpegURL">
+  <source src="https://d20hbmrdzpuuak.cloudfront.net/9923cb1b-a52a-4bd1-9c8c-5d05ad5211e1/AppleHLS1/tulsa-dhs.m3u8" type="application/x-mpegURL">
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -67,7 +68,44 @@ layout: default
 </article>
 
 
-{% endfor %}
+<article itemscope itemtype='http://schema.org/VideoObject'>
+  <header>
+	  <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+	  <h2 itemprop='name'>{{ page.title }}</h2>
+	  <time itemprop='uploadDate' content='{{ page.date }}'>
+	    {{ page.date | date: '%d %B %Y'}}
+	  </time>
+   </header>
+	<section class='video-wrapper'>
+  <video
+    id="2"
+    class="video-js"
+    controls
+    preload="auto"
+    autoplay="true"
+    width="940"
+    height="564"
+    poster="https://d1wfqjcm45bc90.cloudfront.net/BA-rosewood-vlog2.jpg"
+    data-setup='{}'
+    >
+  <source src="https://d20hbmrdzpuuak.cloudfront.net/79c0d19e-a7aa-4209-b76f-4e6a2b23615a/AppleHLS1/rosewood.m3u8" type="application/x-mpegURL">
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+	</section>
+	<section class='description' itemprop='description'>
+  	{{ video.content }}
+  </section>
+</article>
+
+
+{% comment %}{% raw %} {% endfor %} {% endraw %}{% endcomment %}
   </div>
 
 

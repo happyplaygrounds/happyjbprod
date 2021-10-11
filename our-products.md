@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Our Products
-permalink: /about/
+redirect_to: https://www.happyplaygrounds.com/our-products
 ---
 
 This is a basic Jekyll theme based on Bootstrap 5. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
