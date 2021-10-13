@@ -176,6 +176,9 @@ $marketing-site-footer-bottom-bg: #828282;
 
 .navbar {
 	padding-left: 20 !important;
+        @include media-breakpoint-down(xl) {
+	padding-left: 0 !important;
+    }
 	margin-bottom: 100px !important;
 	font-family: 'Montserrat', sans-serif;
 }
