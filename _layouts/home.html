@@ -40,7 +40,7 @@ layout: default
 	  </time>
    </header>
 	<section class='video-wrapper'>
-  <video
+  <video-js
      id="{{video.happy_id}}"
     class="video-js"
     controls
@@ -58,7 +58,9 @@ layout: default
         >supports HTML5 video</a
       >
     </p>
-  </video>
+  </video-js>
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
 
 	</section>
 	<section class='description' itemprop='description'>
@@ -92,6 +94,5 @@ layout: default
   {%- endif -%}
 
 
-  <script src="https://vjs.zencdn.net/7.15.4/video.min.js"></script>
 
 </div>
