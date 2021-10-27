@@ -40,6 +40,7 @@ layout: default
 	  </time>
    </header>
 	<section class='video-wrapper'>
+<div class="videocontent">
   <video-js
      id="{{video.happy_id}}"
     class="video-js"
@@ -48,7 +49,7 @@ layout: default
     width="940"
     height="564"
     poster="https://d1wfqjcm45bc90.cloudfront.net/{{ video.image }}"
-    data-setup='{}'
+    data-setup='{"fluid": true}'
     >
     <source src="{{video.happysource}}" type="application/x-mpegURL">
     <p class="vjs-no-js">
@@ -59,6 +60,7 @@ layout: default
       >
     </p>
   </video-js>
+</div>
   <script src="https://unpkg.com/video.js/dist/video.js"></script>
   <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
 
